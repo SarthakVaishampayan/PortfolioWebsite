@@ -1,0 +1,154 @@
+/* src/components/Hero/Hero.css */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-bg);
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Title */
+.hero-title {
+  font-size: 8vw;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  max-width: 100%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title .highlight {
+  color: var(--primary-orange);
+}
+
+.hero-title .outline {
+  color: transparent;
+  -webkit-text-stroke: 3px var(--text-dark);
+  text-stroke: 3px var(--text-dark);
+}
+
+/* Hero Image - YOUR CUSTOM SIZE */
+.hero-image {
+  position: absolute;
+  right: -18%;
+  top: 50%;
+  transform: translateY(-45%);
+  z-index: 3;
+}
+
+.image-wrapper {
+  width: 650px;
+  height: 950px;
+  position: relative;
+}
+
+.image-placeholder {
+  display: none;
+}
+
+/* Image Styling */
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Orange Geometric Shape - ADJUSTED POSITION */
+.orange-shape {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  width: 280px;
+  height: 280px;
+  background-color: var(--primary-orange);
+  transform: rotate(45deg);
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 7vw;
+  }
+
+  .image-wrapper {
+    width: 380px;
+    height: 480px;
+  }
+
+  .orange-shape {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 968px) {
+  .hero {
+    min-height: 80vh;
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 12vw;
+    margin-bottom: 50px;
+  }
+
+  .hero-image {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 40px;
+  }
+
+  .image-wrapper {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .orange-shape {
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: 10%;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 15vw;
+  }
+
+  .image-wrapper {
+    width: 240px;
+    height: 300px;
+  }
+
+  .orange-shape {
+    width: 150px;
+    height: 150px;
+  }
+}

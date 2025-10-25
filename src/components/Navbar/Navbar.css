@@ -1,0 +1,121 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+  background-color: var(--light-bg);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.logo-icon {
+  color: var(--primary-orange);
+  font-size: 24px;
+}
+
+.nav-logo:hover {
+  color: var(--primary-orange);
+}
+
+/* Menu Items */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-orange);
+}
+
+/* CTA Button */
+.nav-cta {
+  margin-left: 20px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-dark);
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: var(--light-bg);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+    gap: 30px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  .nav-cta {
+    display: none;
+  }
+}

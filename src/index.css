@@ -1,0 +1,142 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Colors matching your design */
+  --primary-orange: #FF8C00;
+  --dark-bg: #1a1a1a;
+  --darker-bg: #0f0f0f;
+  --light-bg: #e8e4df;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+  --text-gray: #666666;
+  --border-gray: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Buttons */
+.btn {
+  padding: 14px 32px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-orange);
+  color: var(--text-light);
+}
+
+.btn-orange {
+  background-color: var(--primary-orange);
+  color: var(--text-light);
+}
+
+.btn-orange:hover {
+  background-color: #ff9d1a;
+  transform: translateY(-2px);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 20px;
+}
+
+
