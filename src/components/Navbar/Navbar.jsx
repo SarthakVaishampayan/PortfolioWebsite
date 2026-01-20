@@ -57,7 +57,7 @@ function Navbar() {
         </ul>
 
         {/* Download CV Button */}
-      <a href="/Sarthak_Vaishampayan_CV.pdf" download="Sarthak_Vaishampayan_CV.pdf" className="btn btn-primary nav-cta">
+      <a href="/Sarthak_Vaishampayan.docx" download="Sarthak_Vaishampayan_CV" className="btn btn-primary nav-cta">
   DOWNLOAD CV
 </a>
 
